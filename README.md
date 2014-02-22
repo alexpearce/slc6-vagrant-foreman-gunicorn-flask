@@ -8,7 +8,7 @@ There are three classes of file:
 2. The `*_provision.sh` files define the provisioning which sets up the VM, and
 3. `setup_velo.sh` is application-specific configuration for running a Flask app, serverd by Gunicorn, with Foreman managing the processes.
 
-To initialise the virtual machine, install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](http://docs.vagrantup.com/v2/installation/index.html) and then, inside this directory, run
+To initialise the virtual machine, install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](http://docs.vagrantup.com/v2/installation/index.html) and then, inside this repository, run
 
     vagrant up --provision
 
@@ -18,7 +18,7 @@ and then when prompted to reload, do so with
 
 Both of these steps can take some time, upwards of ten minutes.
 
-If you then want to run the VELO web application, SSH into the VM
+If you then want to run a web application, SSH into the VM
 
     vagrant ssh
 
@@ -37,7 +37,7 @@ Then [visit the site](http://localhost:5000/) on your development machine.
 The App
 -------
 
-The `setup_app.sh` script assume there's a [Flask](http://flask.pocoo.org/) app in the `app/` directory, along with a [pip]() [`requirements.txt`]() file defining the app's dependencies, and a [Foreman]() [`Procfile`]() that defines the app's processes.
+The `setup_app.sh` script assume there's a [Flask](http://flask.pocoo.org/) app in the `app/` directory, along with a [pip](https://pip.readthedocs.org/en/latest/) [`requirements.txt`](https://pip.readthedocs.org/en/latest/user_guide.html#requirements-files) file defining the app's dependencies, and a [Foreman](http://ddollar.github.io/foreman/) [`Procfile`](http://ddollar.github.io/foreman/#PROCFILE) that defines the app's processes.
 
 An example app is included for completeness.
 
